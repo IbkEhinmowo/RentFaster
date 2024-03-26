@@ -85,9 +85,7 @@ export default function Testemonial(){
 
                     <blockquote className="flex-1 mt-8">
                       <p className="text-lg leading-relaxed text-gray-900 font-pj">
-                        “You made it so simple. My new site is so much faster
-                        and easier to work with than my old site. I just choose
-                        the page, make the change.”
+                        “OMG!!! Renting a Car has never been easier, the cost savings on here are a life saver”
                       </p>
                     </blockquote>
                   </div>
@@ -103,7 +101,7 @@ export default function Testemonial(){
                         Leslie Alexander
                       </p>
                       <p className="mt-0.5 text-sm font-pj text-gray-600">
-                        Freelance React Developer
+                        RentFaster Customer
                       </p>
                     </div>
                   </div>
