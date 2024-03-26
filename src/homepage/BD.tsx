@@ -35,5 +35,5 @@ export default function BD() {
         </div>
       </div>
     </div>
-  );
+  )
 }
