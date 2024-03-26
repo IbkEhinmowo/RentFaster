@@ -8,7 +8,6 @@ export default function BD() {
             peer-to-peer car rental, offers exceptional services and digital
             experiences blending convenience with innovation."
           </p>
-          <button>BOOK NOW</button>
         </section>
       </div>
       <div className="pictureline">
@@ -35,5 +34,5 @@ export default function BD() {
         </div>
       </div>
     </div>
-  );
+  )
 }

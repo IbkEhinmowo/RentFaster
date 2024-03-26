@@ -44,9 +44,9 @@ export default function Taskbar() {
                 </li>
               </ul>
               <div>
-                <button id='button'>Sign in </button>
+                <button id="button">Sign in </button>
                 <span> </span>
-                <button>Sign up </button>
+                <button id="button">Sign up </button>
               </div>
             </nav>
           </div>

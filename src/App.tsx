@@ -10,10 +10,10 @@ export function App() {
     <div className="font-medium">
       <Taskbar />
       <Video />
+      <BD />
       <Testemonial />
-      <Faq /> 
+      <Faq />
       <Footer />
-      
     </div>
   )
 }
