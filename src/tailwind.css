@@ -24,6 +24,10 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+.vidtext h1,
+label {
+  color: white !important;
+}
 
 button {
   border-radius: 0.6rem;
@@ -40,8 +44,7 @@ button {
   background-position: 0 100%;
 }
 
-#button:hover,
-#playbutton:hover {
+#button:hover {
   border-color: #252422;
   background-color: #252422;
   color: #f4f4f4;
@@ -70,55 +73,6 @@ button {
 html {
   scroll-behavior: smooth;
 }
-.taskbar {
-  width: 100vw;
-  position: relative;
-  right: 0px;
-  margin: 0;
-}
-.nav {
-  max-width: 95vw;
-  width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 10px;
-  margin: auto;
-  transition: background-color 0.3s;
-}
-.navig {
-  animation: fadeInFromLeft linear 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.headroom {
-  top: 0;
-  left: 0;
-  right: 0;
-  zindex: 1;
-  background-color: transparent;
-}
-.headroom--unfixed {
-  position: relative;
-  transform: translateY(0);
-}
-.headroom--scrolled {
-  transition: transform 200ms ease-in-out;
-}
-.headroom--unpinned {
-  position: fixed;
-  transform: translateY(-100%);
-}
-
-.headroom--pinned {
-  width: 100vw;
-  position: fixed;
-  top: 0px !important;
-  transform: translateY(0%);
-  color: black !important;
-  z-index: 10;
-}
 
 @keyframes fadeInFromLeft {
   0% {
@@ -130,37 +84,11 @@ html {
     transform: translateY(0); /* Return to its normal position */
   }
 }
-.nav h1 {
-  font-size: x-large;
-  font-weight: bolder;
-}
-.nav ul {
-  padding-right: 8rem;
-  display: flex;
 
-  width: 55%;
-}
-li {
-  list-style: none;
-  width: 100%;
-}
-.taskbar a {
-  text-decoration: none;
-  color: black;
-}
 image {
   width: 30px;
   margin: 0%;
   padding: 0%;
-}
-.taskbar svg {
-  width: 30px;
-  color: black;
-  transition: transform 0.4s ease;
-  cursor: pointer;
-}
-.taskbar svg:hover {
-  transform: scale(1.3);
 }
 
 video {
@@ -246,7 +174,9 @@ li a {
   font-weight: bolder;
   line-height: normal;
 }
-
+footer a {
+  color: #f4f4f4 !important;
+}
 .pictureline {
   display: flex;
   justify-content: space-around;
@@ -274,20 +204,23 @@ li a {
 }
 #playbutton {
   position: absolute;
-
-  top: 80%;
+  top: 70%;
   left: 5%;
-  background-color: white;
+  background-color: transparent;
 }
-#playbutton:hover {
-  background-color: #252422;
-}
+
 @media only screen and (max-width: 1200px) {
   .nav ul {
     display: none;
   }
   .nav {
     justify-content: space-between;
+  }
+  #playbutton {
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    background-color: transparent;
   }
   .below1 p {
     width: 90%;
@@ -297,4 +230,96 @@ li a {
     width: 90vw;
     transition: transform 0.4s ease; /* Smooth zoom effect */
   }
+}
+/* style.css */
+
+/* Custom responsive styles */
+@media (max-width: 640px) {
+  header .buttons {
+    display: none;
+  }
+  #playbutton {
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    background-color: transparent;
+  }
+  header nav {
+    display: none;
+  }
+
+  header .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  header .menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 5px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom hover effects */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img.car:hover {
+  transform: scale(1.05);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom background patterns */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23e5e7eb' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Custom typography */
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
 }
