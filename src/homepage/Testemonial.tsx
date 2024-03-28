@@ -1,261 +1,97 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-export default function Testemonial(){
+// Section component
+const Section = ({title, description}) => {
   return (
-    <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center">
-          <div className="text-center">
-            <p className="text-lg font-medium text-gray-600 font-pj">
-              2,157 people have said how good Rareblocks
-            </p>
-            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
-              Our happy clients say about us
-            </h2>
-          </div>
-
-          <div className="mt-8 text-center md:mt-16 md:order-3">
-            <a
-              href="#"
-              title=""
-              className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"
-            >
-              {' '}
-              Check all 2,157 reviews{' '}
-            </a>
-          </div>
-
-          <div className="relative mt-10 md:mt-24 md:order-2">
-            <div className="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6">
-              <div
-                className="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter"
-                style={{
-                  background:
-                    'linear-gradient(90deg, #44ff9a -0.55%, #44b0ff 22.86%, #8b44ff 48.36%, #ff6644 73.33%, #ebff70 99.34%)',
-                }}
-              ></div>
-            </div>
-
-            <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
-              <div className="flex flex-col overflow-hidden shadow-xl">
-                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                  <div className="flex-1">
-                    <div className="flex items-center">
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-
-                    <blockquote className="flex-1 mt-8">
-                      <p className="text-lg leading-relaxed text-gray-900 font-pj">
-                        “OMG!!! Renting a Car has never been easier, the cost savings on here are a life saver”
-                      </p>
-                    </blockquote>
-                  </div>
-
-                  <div className="flex items-center mt-8">
-                    <img
-                      className="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
-                      alt=""
-                    />
-                    <div className="ml-4">
-                      <p className="text-base font-bold text-gray-900 font-pj">
-                        Leslie Alexander
-                      </p>
-                      <p className="mt-0.5 text-sm font-pj text-gray-600">
-                        RentFaster Customer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col overflow-hidden shadow-xl">
-                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                  <div className="flex-1">
-                    <div className="flex items-center">
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-
-                    <blockquote className="flex-1 mt-8">
-                      <p className="text-lg leading-relaxed text-gray-900 font-pj">
-                        “Simply the best. Better than all the rest. I’d
-                        recommend this product to beginners and advanced users.”
-                      </p>
-                    </blockquote>
-                  </div>
-
-                  <div className="flex items-center mt-8">
-                    <img
-                      className="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
-                      alt=""
-                    />
-                    <div className="ml-4">
-                      <p className="text-base font-bold text-gray-900 font-pj">
-                        Jacob Jones
-                      </p>
-                      <p className="mt-0.5 text-sm font-pj text-gray-600">
-                        Digital Marketer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col overflow-hidden shadow-xl">
-                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                  <div className="flex-1">
-                    <div className="flex items-center">
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg
-                        className="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-
-                    <blockquote className="flex-1 mt-8">
-                      <p className="text-lg leading-relaxed text-gray-900 font-pj">
-                        “I cannot believe that I have got a brand new landing
-                        page after getting Omega. It was super easy to edit and
-                        publish.”
-                      </p>
-                    </blockquote>
-                  </div>
-
-                  <div className="flex items-center mt-8">
-                    <img
-                      className="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
-                      alt=""
-                    />
-                    <div className="ml-4">
-                      <p className="text-base font-bold text-gray-900 font-pj">
-                        Jenny Wilson
-                      </p>
-                      <p className="mt-0.5 text-sm font-pj text-gray-600">
-                        Graphic Designer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section className="mb-16">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">{title}</h2>
+      <p className="text-gray-600 mb-6">{description}</p>
+      <a
+        href="#"
+        className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600"
+      >
+        Learn More
+      </a>
     </section>
   )
 }
+
+// GridItem component
+const GridItem = ({imageUrl, alt, title, description}) => {
+  return (
+    <div className="text-center">
+      <img
+        src={imageUrl}
+        alt={alt}
+        className="w-48 h-48 object-cover rounded-full mx-auto mb-4"
+      />
+      <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <a href="#" className="text-blue-500 hover:text-blue-600">
+        Learn More
+      </a>
+    </div>
+  )
+}
+
+// Review component
+const Review = ({text, rating}) => {
+  return (
+    <div className="bg-gray-100 p-6 rounded-md text-center">
+      <p className="text-gray-800 mb-2">"{text}"</p>
+      <div className="text-yellow-400 mb-2">★★★★★</div>
+    </div>
+  )
+}
+
+// Main component
+const Testemonial = () => {
+  return (
+    <div>
+      <Section
+        title="Hire a Driver"
+        description="Experience the convenience of hiring a driver for your trip."
+      />
+      <Section
+        title="Benefits of Using Rentfaster"
+        description="Discover the advantages of using Rentfaster for your car rental needs."
+      />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <GridItem
+          imageUrl="https://cdn.discordapp.com/attachments/1076030668234051625/1223012231550210088/https___turo.com_ca_en_I_want_to_make_an_image_for_car_renter.png?ex=66184de6&is=6605d8e6&hm=6f4b6c0430f615213348f588ca371218a37ffe8e596a740e65adc75823e9ebe1&0"
+          alt="For Renters"
+          title="For Renters"
+          description="Find and book the perfect car for your trip."
+        />
+        <GridItem
+          imageUrl="https://cdn.discordapp.com/attachments/1076030668234051625/1223013246043160596/host.png?ex=66184ed8&is=6605d9d8&hm=6449133a60fad376ff39fb3a9051518182949878c7f5e9b5627e95975629db4d&"
+          alt="For Hosts"
+          title="For Hosts"
+          description="Earn money by renting out your car to others."
+        />
+        <GridItem
+          imageUrl="https://cdn.discordapp.com/attachments/1076030668234051625/1223013245372207185/driver.png?ex=66184ed8&is=6605d9d8&hm=0bb88a2d4c3f9f55969a8313190425abbb303a366ec7cac6b2fc8b7f845d4104&"
+          alt="For Drivers"
+          title="For Drivers"
+          description="Get hired as a driver and earn money."
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Review
+          text="Best Company Ever Very Much WoW Best Pricing"
+          rating="★★★★★"
+        />
+        <Review
+          text="Renting a Car From Rentfaster is easier than explaining my grandma."
+          rating="★★★★★"
+        />
+        <Review
+          text="My Car Went from Couch Potato to Cash Cow Thanks, Rentfaster <3"
+          rating="★★★★★"
+        />
+      </div>
+    </div>
+  )
+}
+
+export default Testemonial

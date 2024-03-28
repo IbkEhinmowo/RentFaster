@@ -1,19 +1,16 @@
 import Taskbar from './homepage/Taskbar'
-import Video from './homepage/video'
-import BD from './homepage/BD'
-import Footer from './homepage/Footer'
-import Testemonial from './homepage/Testemonial'
-import Faq from './homepage/Faq'
+import {Home} from './homepage/Home'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 export function App() {
   return (
     <div className="font-medium">
-      <Taskbar />
-      <Video />
-      <BD />
-      <Testemonial />
-      <Faq />
-      <Footer />
+      <Router>
+        <Taskbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   )
 }

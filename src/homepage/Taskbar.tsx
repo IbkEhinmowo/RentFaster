@@ -1,57 +1,40 @@
-import Headroom from 'react-headroom'
-import {useState, useEffect} from 'react'
-
-export default function Taskbar() {
-  const [state, setState] = useState(false)
-  const [shouldRenderCounter, setShouldRenderCounter] = useState(false)
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShouldRenderCounter(true)
-    }, 4000)
-
-    return () => clearTimeout(timeout)
-  }, [])
-
-  const handleSidebar = () => {
-    setState(!state) // Toggle the state by negating its current value
-  }
-  const headroomStyle = {}
+function Taskbar() {
   return (
-    <div className="taskbar">
-      {shouldRenderCounter && (
-        <Headroom style={headroomStyle} disableInlineStyles={true}>
-          <div className="navig">
-            <nav className="nav">
-              <h1>
-                <a href="./">RentFaster®</a>
-              </h1>
-              <ul>
-                <li>
-                  <a href="#about">About</a>
-                </li>
-                <li>
-                  <a href="#new">Ride</a>
-                </li>
-                <li>
-                  <a href="#thinking">Drive</a>
-                </li>
-                <li>
-                  <a href="#careers">Host</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-              </ul>
-              <div>
-                <button id="button">Sign in </button>
-                <span> </span>
-                <button id="button">Sign up </button>
-              </div>
-            </nav>
-          </div>
-        </Headroom>
-      )}
-    </div>
+    <header className="bg-white shadow-md">
+      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+        <a href="#" className="text-2xl font-bold text-gray-800">
+          Rentfaster
+        </a>
+        <nav>
+          <ul className="flex space-x-6">
+            <li>
+              <a href="#" className="text-gray-600 hover:text-gray-800">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-600 hover:text-gray-800">
+                Search
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-600 hover:text-gray-800">
+                Become Host
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className="buttons">
+          <button className="text-gray-600 hover:text-gray-800">
+            Login In
+          </button>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </header>
   )
 }
+
+export default Taskbar
