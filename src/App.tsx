@@ -1,7 +1,8 @@
 import Taskbar from './homepage/Taskbar'
 import {Home} from './homepage/Home'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-//  
+import { useState } from 'react'
+import {HashRouter as Router, Routes, Route} from 'react-router-dom'
+//  //
 
 export function App() {
   return (
