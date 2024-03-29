@@ -1,12 +1,12 @@
 {
-  "homepage": "https://ibkehinmowo.github.io/rentFaster",
+  "homepage": "https://ibkehinmowo.github.io/rentFaster/",
   "name": "codesandbox-template-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "lint": "yarn lint:types && yarn lint:quality",
     "lint:types": "tsc",
     "lint:quality": "eslint --ignore-path .gitignore .",
