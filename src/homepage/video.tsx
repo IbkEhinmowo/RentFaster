@@ -2,7 +2,10 @@ export default function Video() {
   return (
     <div className="vidtext">
       <video autoPlay loop muted playsInline>
-        <source src="src/assets/special.mp4" type="video/mp4" />
+        <source
+          src="https://github.com/IbkEhinmowo/RentFaster/raw/main/src/assets/special.mp4"
+          type="video/mp4"
+        />
       </video>
       <div id="playbutton">
         <h1 className="text-4xl font-bold text-gray-800 mb-8">
