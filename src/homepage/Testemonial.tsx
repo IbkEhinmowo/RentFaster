@@ -23,7 +23,17 @@ const Section = ({
 }
 
 // GridItem component
-const GridItem = ({imageUrl, alt, title, description}: { imageUrl: string, alt: string, title: string, description: string })  => {
+const GridItem = ({
+  imageUrl,
+  alt,
+  title,
+  description,
+}: {
+  imageUrl: string
+  alt: string
+  title: string
+  description: string
+}) => {
   return (
     <div className="text-center">
       <img
@@ -41,7 +51,7 @@ const GridItem = ({imageUrl, alt, title, description}: { imageUrl: string, alt: 
 }
 
 // Review component
-const Review = ({text, rating}) => {
+const Review = ({text, rating}: {text: string; rating: string}) => {
   return (
     <div className="bg-gray-100 p-6 rounded-md text-center">
       <p className="text-gray-800 mb-2">"{text}"</p>

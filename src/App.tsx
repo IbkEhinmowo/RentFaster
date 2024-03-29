@@ -1,11 +1,6 @@
 import Taskbar from './homepage/Taskbar'
 import {Home} from './homepage/Home'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  RouteProps,
-} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 export function App() {
   return (
@@ -13,7 +8,7 @@ export function App() {
       <Router>
         <Taskbar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </Router>
     </div>

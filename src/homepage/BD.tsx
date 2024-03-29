@@ -12,7 +12,7 @@ const Car = ({
   alt: string
   title: string
   location: string
-  price: number
+  price: string
 }) => {
   return (
     <div className="bg-white shadow-md rounded-md p-6">
@@ -40,21 +40,21 @@ const BD = () => {
         alt="Car 1"
         title="Tesla Model 3"
         location="Vancouver, BC"
-        price="45.99 $"
+        price={45.99 + ' $'}
       />
       <Car
         imageUrl="https://cdn.motor1.com/images/mgl/9xkvm/s1/mclaren-p1-5th-anniversary.webp"
         alt="Car 2"
         title="McLaren P1"
         location="North Vancouver"
-        price="70.22 $"
+        price={70.22 + ' $'}
       />
       <Car
         imageUrl="https://www.topgear.com/sites/default/files/2023/07/1%20Mercedes-AMG%20A45.jpeg"
         alt="Car 3"
         title="Mercedes-Benz AMG A45"
         location="Burnaby"
-        price="34.95 $"
+        price={34.95 + ' $'}
       />
     </div>
   )
