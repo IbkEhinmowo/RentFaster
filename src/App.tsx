@@ -8,7 +8,7 @@ export function App() {
       <Router>
         <Taskbar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </Router>
     </div>
