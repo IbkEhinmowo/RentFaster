@@ -24,6 +24,10 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+.vidtext #playbutton,
+section {
+  margin: 8%;
+}
 .vidtext h1,
 label {
   color: white !important;
@@ -204,7 +208,7 @@ footer a {
 }
 #playbutton {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 5%;
   background-color: transparent;
 }
