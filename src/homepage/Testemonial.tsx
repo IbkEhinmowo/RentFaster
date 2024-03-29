@@ -1,7 +1,13 @@
 import React from 'react'
 
 // Section component
-const Section = ({title, description}) => {
+const Section = ({
+  title,
+  description,
+}: {
+  title: string
+  description: string
+}) => {
   return (
     <section className="mb-16">
       <h2 className="text-3xl font-bold text-gray-800 mb-6">{title}</h2>
@@ -17,7 +23,7 @@ const Section = ({title, description}) => {
 }
 
 // GridItem component
-const GridItem = ({imageUrl, alt, title, description}) => {
+const GridItem = ({imageUrl, alt, title, description}: { imageUrl: string, alt: string, title: string, description: string })  => {
   return (
     <div className="text-center">
       <img

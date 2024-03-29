@@ -1,7 +1,19 @@
 import React from 'react'
 
 // Car component
-const Car = ({imageUrl, alt, title, location, price}) => {
+const Car = ({
+  imageUrl,
+  alt,
+  title,
+  location,
+  price,
+}: {
+  imageUrl: string
+  alt: string
+  title: string
+  location: string
+  price: number
+}) => {
   return (
     <div className="bg-white shadow-md rounded-md p-6">
       <img
