@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d distnp",
+    "deploy": "gh-pages -d dist",
     "lint": "yarn lint:types && yarn lint:quality",
     "lint:types": "tsc",
     "lint:quality": "eslint --ignore-path .gitignore .",

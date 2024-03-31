@@ -217,6 +217,15 @@ footer a {
   .nav ul {
     display: none;
   }
+    .filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100% !important;
+  }
+  .filters button{
+   width: 80% !important;
+  }
   .nav {
     justify-content: space-between;
   }
@@ -242,12 +251,31 @@ footer a {
   header .buttons {
     display: none;
   }
+  .filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100% !important;
+  }
+  .filters button{
+   width: 80% !important;
+  }
+
+  
+  #listing{
+  flex-direction: column;
+}
+#carimage{
+  width: 100% !important;
+  height: 100%;
+}
   #playbutton {
     position: absolute;
     top: 15%;
     left: 0%;
     background-color: transparent;
   }
+  
   header nav {
     display: none;
   }
@@ -284,6 +312,7 @@ footer a {
   .testimonials {
     grid-template-columns: 1fr;
   }
+  
 }
 
 /* Custom hover effects */
@@ -327,3 +356,30 @@ h3 {
 p {
   font-family: 'Open Sans', sans-serif;
 }
+.outersearch{
+  display: flex;
+  justify-content: center;
+}
+#carimage{
+  width: 40%;
+  height: 100%;
+}
+
+#search{
+  width: 70%;
+  height: 60% !important;
+
+
+}
+.filters{
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+
+}
+.filters button{
+ margin: 10px;
+}
+ .filters button{
+   width: 80% !important;
+  }

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Video() {
   return (
     <div className="vidtext">
@@ -59,8 +61,9 @@ export default function Video() {
                 I need a driver
               </label>
             </div>
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 ml-auto">
-              Search
+            <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 ml-auto ml-2">
+              <Link to="/search">Search</Link>
+              
             </button>
           </div>
         </form>

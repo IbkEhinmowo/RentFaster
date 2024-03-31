@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 function Taskbar() {
   return (
     <header className="bg-white shadow-md">
@@ -13,9 +14,10 @@ function Taskbar() {
               </a>
             </li>
             <li>
-              <a href="#" className="text-gray-600 hover:text-gray-800">
+              <Link to="/search">
                 Search
-              </a>
+              </Link>   
+         
             </li>
             <li>
               <a href="#" className="text-gray-600 hover:text-gray-800">
