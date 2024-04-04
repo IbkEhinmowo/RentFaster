@@ -53,9 +53,9 @@ React Router (HashRouter) is used to manage navigation between the components.
 
 1. **Clone Repository:** `git clone https://github.com/your-username/rent-faster.git`
   
-2. **Install Dependencies:** `npm install`
+2. **Install Dependencies:** `npm i`
   
-3. **Start Development Server:** `npm start`
+3. **Start Development Server:** `npm run dev`
 
 ## To Do
 
