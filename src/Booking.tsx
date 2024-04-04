@@ -47,7 +47,7 @@ export default function Booking () {
                         name="full_name"
                         id="full_name"
                         className="h-10 border mt-1 rounded px-4 w-full bg-black-50"
-                        value=""
+                      
                       />
                     </div>
                     <div className="md:col-span-5">
@@ -57,7 +57,7 @@ export default function Booking () {
                         name="mail"
                         id="mail"
                         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                        value=""
+                      
                         placeholder="mail@domain.com"
                       />
                     </div>
@@ -69,7 +69,7 @@ export default function Booking () {
                         name="phone"
                         id="phone"
                         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                        value=""
+                    
                         placeholder="123-456-7890"
                       />
                     </div>
@@ -113,7 +113,7 @@ export default function Booking () {
                         name="credit_card"
                         id="credit_card"
                         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                        value=""
+                        
                         placeholder="1234 5678 9012 3456"
                       />
                     </div>
@@ -126,7 +126,7 @@ export default function Booking () {
                         name="expiration_date"
                         id="expiration_date"
                         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                        value=""
+                        
                         placeholder="MM/YY"
                       />
                     </div>
@@ -138,7 +138,7 @@ export default function Booking () {
                         name="cvv"
                         id="cvv"
                         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                        value=""
+                        
                         placeholder="123"
                       />
                     </div>
@@ -165,7 +165,7 @@ export default function Booking () {
                         name="email"
                         id="email"
                         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                        value=""
+                     
                         placeholder="email@domain.com"
                       />
                     </div>
@@ -177,7 +177,7 @@ export default function Booking () {
                         name="address"
                         id="address"
                         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                        value=""
+                       
                         placeholder=""
                       />
                     </div>
@@ -189,7 +189,7 @@ export default function Booking () {
                         name="city"
                         id="city"
                         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                        value=""
+                        
                         placeholder=""
                       />
                     </div>
@@ -202,7 +202,7 @@ export default function Booking () {
                           id="country"
                           placeholder="Country"
                           className="px-4 appearance-none outline-none text-black-800 w-full bg-transparent"
-                          value=""
+                         
                         />
                         <button
                           tabIndex={-1}
@@ -248,7 +248,7 @@ export default function Booking () {
                           id="state"
                           placeholder="State"
                           className="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent"
-                          value=""
+                         
                         />
                         <button
                           tabIndex={-1}
@@ -294,7 +294,7 @@ export default function Booking () {
                         id="zipcode"
                         className="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50"
                         placeholder=""
-                        value=""
+                        
                       />
                     </div>
 
