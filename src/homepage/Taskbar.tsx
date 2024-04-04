@@ -14,15 +14,12 @@ function Taskbar() {
               </a>
             </li>
             <li>
-              <Link to="/search">
-                Search
-              </Link>   
-         
+              <Link to="/search">Search</Link>
             </li>
             <li>
-              <a href="#" className="text-gray-600 hover:text-gray-800">
+              <Link to="/Renters" className="text-gray-600 hover:text-gray-800">
                 Become Host
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
