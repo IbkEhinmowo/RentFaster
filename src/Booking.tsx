@@ -85,6 +85,25 @@ export default function Booking () {
                         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
                       />
                     </div>
+                    <div className="md:col-span-5">
+                      <label htmlFor="pickup_date">Pickup Date</label>
+                      <input
+                        type="date"
+                        name="pickup_date"
+                        id="pickup_date"
+                        className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      />
+                    </div>
+
+                    <div className="md:col-span-5">
+                      <label htmlFor="dropoff_date">Drop Off Date</label>
+                      <input
+                        type="date"
+                        name="dropoff_date"
+                        id="dropoff_date"
+                        className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      />
+                    </div>
 
                     {/* Existing code */}
                     <div className="md:col-span-5">
@@ -250,7 +269,6 @@ export default function Booking () {
                         </button>
                         <button
                           tabIndex={-1}
-                         
                           className="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600"
                         >
                           <svg
@@ -296,9 +314,9 @@ export default function Booking () {
 
                     <div className="md:col-span-5 text-right">
                       <div className="inline-flex items-end">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <a href="./"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >
                           Submit
-                        </button>
+                        </button> </a>
                       </div>
                     </div>
                   </div>

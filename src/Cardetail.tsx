@@ -64,7 +64,7 @@ const navigate = useNavigate()
         <p className="mt-5 font-bold">
           Availability:{' '}
           {productDetailItem.availability ? (
-            <span className="text-green-600">In Stock </span>
+            <span className="text-green-600">four sellers </span>
           ) : (
             <span className="text-red-600">Expired</span>
           )}
