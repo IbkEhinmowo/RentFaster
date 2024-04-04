@@ -1,10 +1,25 @@
 import Taskbar from './homepage/Taskbar'
 import {Home} from './homepage/Home'
-import Search from './Search/Search'
+import Search from './Search'
 import { useState } from 'react'
 import {HashRouter as Router, Routes, Route} from 'react-router-dom'
+import CarDetail from './Cardetail'
+import Booking from './Booking'
 //  //
-const carData = [
+
+interface CarData {
+  imageUrl: string
+  alt: string
+  title: string
+  location: string
+  price: number
+  year: number | null
+  seatCount: number
+  driverAvailability: boolean
+  vehicleType: string
+}
+
+const carData: CarData[] = [
   {
     imageUrl:
       'https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-S-Desktop-LHD-6.22.jpg',
@@ -42,7 +57,8 @@ const carData = [
     vehicleType: 'Diesel',
   },
   {
-    imageUrl: 'https://placeholder.com/300x200', // Placeholder image
+    imageUrl:
+      'https://fordauthority.com/wp-content/uploads/2017/11/2018-Ford-Mustang-GT-in-Magnetic.jpg', // Placeholder image
     alt: 'Car 4',
     title: 'Ford Mustang GT',
     location: 'Richmond',
@@ -53,7 +69,8 @@ const carData = [
     vehicleType: 'Diesel',
   },
   {
-    imageUrl: 'https://placeholder.com/300x200', // Placeholder image
+    imageUrl:
+      'https://toyotacanada.scene7.com/is/image/toyotacanada/2025_Toyota%20Camry?ts=1704989350901&dpr=off', // Placeholder image
     alt: 'Car 5',
     title: 'Toyota Camry',
     location: 'Surrey',
@@ -64,7 +81,8 @@ const carData = [
     vehicleType: 'Electric',
   },
   {
-    imageUrl: 'https://placeholder.com/300x200', // Placeholder image
+    imageUrl:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/2017_Honda_Civic_SR_VTEC_1.0_Front.jpg/560px-2017_Honda_Civic_SR_VTEC_1.0_Front.jpg', // Placeholder image
     alt: 'Car 6',
     title: 'Honda Civic',
     location: 'New Westminster',
@@ -75,7 +93,8 @@ const carData = [
     vehicleType: 'Diesel',
   },
   {
-    imageUrl: 'https://placeholder.com/300x200', // Placeholder image
+    imageUrl:
+      'https://cdn.motor1.com/images/mgl/lXM9O/s1/2020-audi-a6-allroad-quattro.webp', // Placeholder image
     alt: 'Car 7',
     title: 'Audi A6',
     location: 'Langley',
@@ -86,7 +105,8 @@ const carData = [
     vehicleType: 'Electric',
   },
   {
-    imageUrl: 'https://placeholder.com/300x200', // Placeholder image
+    imageUrl:
+      'https://www.topgear.com/sites/default/files/2022/09/1-BMW-3-Series.jpg', // Placeholder image
     alt: 'Car 8',
     title: 'BMW 3 Series',
     location: 'Coquitlam',
@@ -97,7 +117,8 @@ const carData = [
     vehicleType: 'Diesel',
   },
   {
-    imageUrl: 'https://placeholder.com/300x200', // Placeholder image
+    imageUrl:
+      'https://media.ed.edmunds-media.com/jeep/wrangler/2024/oem/2024_jeep_wrangler_convertible-suv_rubicon-392_fq_oem_1_1600.jpg', // Placeholder image
     alt: 'Car 9',
     title: 'Jeep Wrangler',
     location: 'Delta',
@@ -108,7 +129,8 @@ const carData = [
     vehicleType: 'Electric',
   },
   {
-    imageUrl: 'https://placeholder.com/300x200', // Placeholder image
+    imageUrl:
+      'https://i.gaw.to/vehicles/photos/40/25/402523-2021-porsche-911.jpg?1024x640', // Placeholder image
     alt: 'Car 10',
     title: 'Porsche 911',
     location: 'West Vancouver',
@@ -129,6 +151,8 @@ export function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search carData={carData} />} />
+          <Route path="/Cardetail" element={<CarDetail />} />
+          <Route path="/Booking" element={<Booking />} />
         </Routes>
       </Router>
     </div>

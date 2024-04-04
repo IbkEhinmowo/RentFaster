@@ -1,9 +1,27 @@
 import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
+interface Car {
+  price: number
+  year: number | null
+  vehicleType: string
+  location: string
+  imageUrl: string
+  title: string
+  seatCount: number
+  driverAvailability: boolean
+}
+
+// Define the type for the component props
+interface SearchProps {
+  carData: Car[]
+}
 // Main component
-export default function Search({carData}) {
-  const [sortedData, setSortedData] = useState(carData)
+export default function Search({carData}: SearchProps) {
+  const [sortedData, setSortedData] = useState<Car[]>(carData)
   const [searchInput, setSearchInput] = useState('')
+  const navigate = useNavigate()
 
   const sortByPriceHighToLow = () => {
     const sorted = [...carData].sort((a, b) => b.price - a.price)
@@ -16,7 +34,7 @@ export default function Search({carData}) {
   }
 
   const sortByYear = () => {
-    const sorted = [...carData].sort((a, b) => b.year - a.year)
+    const sorted = [...carData].sort((a, b) => (b.year || 0) - (a.year || 0))
     setSortedData(sorted)
   }
 
@@ -28,14 +46,17 @@ export default function Search({carData}) {
   }
 
   const handleSearch = () => {
+    const navigate = useNavigate()
     const filteredData = carData.filter(
       (car) => car.location.toLowerCase() === searchInput.toLowerCase(),
     )
+
     setSortedData(filteredData)
   }
 
   return (
     <div className="outersearch">
+      
       <div
         className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-10 mt-20 mb-200 "
         id="search"
@@ -103,7 +124,13 @@ export default function Search({carData}) {
               <p>Seat Count: {car.seatCount}</p>
               <p>Driver Available: {car.driverAvailability}</p>
               <p>Vehicle Type: {car.vehicleType}</p>
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 max-w-1/4">
+              <button
+                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 max-w-1/4"
+                onClick={() => {
+                  console.log(car)
+                  navigate('/Cardetail', {state: {car}})
+                }}
+              >
                 View Details
               </button>
             </div>

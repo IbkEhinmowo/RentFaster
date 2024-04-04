@@ -4,26 +4,25 @@ const Faq = () => {
   const [faq, setFaq] = useState([
     {
       question: 'Can I Hire a Driver',
-      answer:
-        'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+      answer:"We offer a variety of driver services, including personal chauffeurs, designated drivers, and delivery drivers."  ,
       open: false,
     },
     {
       question: 'Can i rent a car for a week?',
       answer:
-        'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+        'Yes, we offer weekly car rentals. Please visit our rental page or contact us for pricing and availability.',
       open: false,
     },
     {
       question: 'is Hosting an included Service',
       answer:
-        'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+        'If you provide car hosting support, outline the scope of the service and if there are different pricing tiers.',
       open: false,
     },
     {
       question: 'What are the job opportunties available as a driver',
       answer:
-        'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+        'For a full list of current opportunities, please visit our careers page',
       open: false,
     },
   ])
