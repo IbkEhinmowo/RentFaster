@@ -6,7 +6,7 @@ import Faq from './Faq'
 
 export function Home() {
   return (
-    <div className="font-medium">
+    <div >
       <Video />
       <BD />
       <Testemonial />

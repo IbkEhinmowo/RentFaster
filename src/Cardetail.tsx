@@ -23,15 +23,14 @@ const navigate = useNavigate()
     reviews: '150',
     availability: true,
     category: car.vehicleType,
-    sku: "BE45VGTRK",
+    sku: 'BE45VGTRK',
     price: car.price,
     previousPrice: 59.99,
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem exercitationem voluptate sint eius ea assumenda provident eos repellendus qui neque! Velit ratione illo maiores voluptates commodi eaque illum, laudantium non!',
+      'Rent this exceptional vehicle today and experience the ultimate in driving pleasure. With its stylish exterior and aerodynamic design, this car not only turns heads but also delivers impressive energy efficiency, making it an eco-friendly choice for environmentally conscious drivers.',
   }
   return (
     <section className="container flex-grow mx-auto max-w-[1200px] border-b py-5 lg:grid lg:grid-cols-2 lg:py-10">
-      {/* image gallery */}
       <div className="container mx-auto px-4">
         <ReactImageGallery
           showBullets={false}
@@ -40,9 +39,7 @@ const navigate = useNavigate()
           items={productDetailItem.images}
         />
 
-        {/* /image gallery  */}
       </div>
-      {/* description  */}
 
       <div className="mx-auto px-5 lg:px-5">
         <h2 className="pt-3 text-2xl font-bold lg:pt-0">
