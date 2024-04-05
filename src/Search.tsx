@@ -43,19 +43,15 @@ export default function Search({carData}: SearchProps) {
     )
     setSortedData(sorted)
   }
+const handleSearch = (input: string) => {
+  const filteredData = carData.filter((car) =>
+    car.location.toLowerCase().includes(input.toLowerCase()),
+  )
 
-  const handleSearch = () => {
-    const navigate = useNavigate()
-    const filteredData = carData.filter(
-      (car) => car.location.toLowerCase() === searchInput.toLowerCase(),
-    )
-
-    setSortedData(filteredData)
-  }
-
+  setSortedData(filteredData)
+}
   return (
     <div className="outersearch">
-      
       <div
         className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-10 mt-20 mb-200 "
         id="search"
@@ -90,7 +86,10 @@ export default function Search({carData}: SearchProps) {
           <input
             type="text"
             value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
+            onChange={(e) => {
+              setSearchInput(e.target.value)
+              handleSearch(e.target.value)
+            }}
             placeholder="Search by location"
             className="px-4 py-2 border border-gray-300 rounded-md mr-2 focus:outline-none"
           />
