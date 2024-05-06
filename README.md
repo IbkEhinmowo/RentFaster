@@ -72,5 +72,3 @@ React Router (HashRouter) is used to manage navigation between the components.
 We welcome contributions to improve the Rent Faster project! Please submit pull requests or open issues for any enhancements or bug fixes.
 
 ## License
-
-[Specify your license, e.g., MIT, Apache 2.0]
